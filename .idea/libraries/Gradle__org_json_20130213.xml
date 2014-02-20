@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.json-20130213">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/codeartisans/org.json/20130213/org.json-20130213.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

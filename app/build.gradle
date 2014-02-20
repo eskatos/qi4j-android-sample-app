@@ -1,0 +1,42 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.1'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        // Duplicated files in Jackson JARs
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+
+    compile 'org.qi4j.core:org.qi4j.core.bootstrap:0'
+    // org.json cannot be used as Android embed an outdated version, using Jackson instead
+    compile 'org.qi4j.extension:org.qi4j.extension.valueserialization-jackson:0'
+
+    apk     'org.qi4j.core:org.qi4j.core.runtime:0'
+
+    instrumentTestCompile   'org.qi4j.core:org.qi4j.core.testsupport:0'
+
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.qi4j.core.io-0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/qi4j/core/org.qi4j.core.io/0/org.qi4j.core.io-0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
